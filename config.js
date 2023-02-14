@@ -10,7 +10,7 @@ const configs = {
             //? Aqui deberan estar las configuraciones para la conexion con sequelize
             dialect: 'postgres',
             host: 'localhost',
-            port: 5432,
+            port: 5433,
             username: 'postgres',
             password: 'root',
             database: 'chat-db',
