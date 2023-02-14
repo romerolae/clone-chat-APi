@@ -20,9 +20,9 @@ const Messages = db.define("messages", {
         key: 'id'
     }
   },
-  isActive: {
-    type: DataTypes.BOOLEAN,
-    defaultValue: true
+  status: {
+    type: DataTypes.STRING,
+    defaultValue: 'Sent'
   }
 });
 
