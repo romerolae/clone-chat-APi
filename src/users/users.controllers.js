@@ -1,4 +1,5 @@
 const Users = require('../models/users.models')
+const uuid = require('uuid')
 
 const findAllUser = async () => {
     const data = await Users.findAll()
@@ -16,6 +17,7 @@ const findUserById = async (id) => {
 
 const createNewUser = async (userObj) => {
     const newUser = {
+        id: uuid.v4(),
         firstName : userObj.firstName,
         lastName : userObj.lastName,
         email: userObj.email,
@@ -28,6 +30,7 @@ const createNewUser = async (userObj) => {
 }
 
 const updateUser = async (id, userObj) => {
+    //data === 1
     const data = await Users.update(userObj,{
         where: {
             id: id

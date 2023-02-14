@@ -4,20 +4,20 @@ const responses = require('../utils/handleResponses')
 const getAllUsers = (req, res) => {
     usersControllers.findAllUser()
         .then(data => {
-        responses.success({
-                status: 200,
-                data: data,
-                message: 'Getting all Users',
-                res
-            })
+            responses.success({
+                    status: 200,
+                    data: data,
+                    message: 'Getting all Users',
+                    res
+                })
         })
         .catch(err => {
-        responses.error({
-                status: 400,
-                data: err,
-                message: 'Something bad getting all users',
-                res
-            })
+            responses.error({
+                    status: 400,
+                    data: err,
+                    message: 'Something bad getting all users',
+                    res
+                })
         })
 }
 
