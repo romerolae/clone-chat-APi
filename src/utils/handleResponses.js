@@ -27,7 +27,8 @@ const error = ({status, data, message, res, fields}) => {
         error: true,
         status: status,
         message: message,
-        fields: fields
+        fields: fields,
+        data
     })
 }
 
